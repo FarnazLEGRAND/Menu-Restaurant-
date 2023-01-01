@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Restaurant - Menu</title>
+        <script src="js/script.js"></script>
+    </head>
+    <body background="img\fond5.jpg">
+        <table>
+            <td><img src="img\logo.png" alt="Logo" width="250" height="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a href=""><font size="5">Accueil</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>                
+            <td><a href=""><font size="5">Commander en ligne</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a href=""><font size="5">Retrait sur place</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a href=""><font size="5">Actualité & infos</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a href=""><font size="5">Nous contacter</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <div background="img\white.png">
+                    <p><font size="4" id="panierTxt">Votre panier</font></p>
+                    <button id="btnTotal" onclick="scrollToRecap()">0€ <img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                </div>
+            </td>
+        </table>
+            
+        <hr>
+        
+        <center><h1>Commander</h1></center>
+        <br><br><br>
+
+        <center>
+            <h2>Entrées</h2>
+            <table border="1" background="img\white.png" >
+                <td>
+                    <center>
+                        <img src="img\salade_mediteraneenne.jpg" alt="Salade méditéranéenne" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Salade méditéranéenne</a></b></font>
+                        <p class="aPrice">15€</p>
+                        <input type="number" placeholder="0" min="0" id="e1" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+                <td>
+                    <center>
+                        <img src="img\salade_grecque.jpg" alt="Salade grecque" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Salade grecque</a></b></font>
+                        <p class="aPrice">12€</p>
+                        <input type="number" placeholder="0" min="0" id="e2" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+                <td>
+                    <center>
+                        <img src="img\tortilla_de_falafels.jpg" alt="Tortilla de falafels" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Tortilla de falafels</a></b></font>
+                        <p class="aPrice">14€</p>
+                        <input type="number" placeholder="0" min="0" id="e3" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+            </table>
+        </center>
+        <br><br>
+
+        <center>
+            <h2>Plats</h2>
+            <table border="1" background="img\white.png">
+                <td>
+                    <center>
+                        <img src="img\risotto_milanaise.jpg" alt="Risotto à la milanaise" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Risotto à la milanaise</a></b></font>
+                        <p class="aPrice">25€</p>
+                        <input type="number" placeholder="0" min="0" id="p1" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+                <td>
+                    <center>
+                        <img src="img\spaghetti_bolognaise.jpg" alt="Spaghetti à la bolognaise" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Spaghetti à la bolognaise</a></b></font>
+                        <p class="aPrice">23€</p>
+                        <input type="number" placeholder="0" min="0" id="p2" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+                <td>
+                    <center>
+                        <img src="img\escalope_milanaise.jpg" alt="Escalope à la milanaise" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Escalope à la milanaise</a></b></font>
+                        <p class="aPrice">27€</p>
+                        <input type="number" placeholder="0" min="0" id="p3" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+            </table>
+        </center>
+
+        <br><br>
+
+        <center>
+            <h2>Desserts</h2>
+            <table border="1" background="img\white.png">
+                <td>
+                    <center>
+                        <img src="img\cheesecake.jpg" alt="Cheesecake" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Cheesecake</a></b></font>
+                        <p class="aPrice">7€</p>
+                        <input type="number" placeholder="0" min="0" id="d1" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+                <td>
+                    <center>
+                        <img src="img\chia_pudding.jpg" alt="Chia pudding" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Chia Pudding</a></b></font>
+                        <p class="aPrice">5€</p>
+                        <input type="number" placeholder="0" min="0" id="d2" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+                <td background-color="#ffffff">
+                    <center>
+                        <img src="img\chocolate_cake.jpg" alt="Chocolate cake" width="300" height="200" class="aImg">
+                        <br>
+                        <font size="5"><b><a href="" class="aName">Chocolate cake</a></b></font>
+                        <p class="aPrice">6€</p>
+                        <input type="number" placeholder="0" min="0" id="d3" class="article">
+                        <button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button>
+                    </center>
+                    
+                </td>
+            </table>
+        </center>
+
+        <br><br>
+
+        <center>
+            <h2>Boissons</h2>
+            <table border="1" background="img\white.png">
+                <tr>
+                    <td class="aName">Eau</td>
+                    <td class="aPrice">2€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b1" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Jus d'orange</td>
+                    <td class="aPrice">3€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b2" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Coca-Cola</td>
+                    <td class="aPrice">3€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b3" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Bière</td>
+                    <td class="aPrice">6€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b4" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Vin</td>
+                    <td class="aPrice">8€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b5" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Thé</td>
+                    <td class="aPrice">3€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b6" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Café</td>
+                    <td class="aPrice">2€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b7" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+                <tr>
+                    <td class="aName">Chocolat chaud</td>
+                    <td class="aPrice">4€</td>
+                    <td><input type="number" placeholder="0" min="0" id="b8" class="article boisson"></td>
+                    <td><button onclick="calcul()"><img src="img\panier.png" alt="Panier" width="20" height="20"></button></td>
+                </tr>
+            </table>    
+        </center>
+
+        <br><hr>
+            
+        <form action="" style="display: none" id="order">
+            <h2 id="recapTxt">Récapitulatif de votre commande:</h2>
+            <table border="1px" background="img\white.png" id="recap">
+            </table>
+
+            <h3>Un commentaire à ajouter? Des ingrédients à retirer?</h3>
+            <textarea name="" id="" cols="72" rows="10"></textarea>
+
+            <br><br>
+
+            <h3>Pour quelle heure?</h3>
+            <input type="time" name="time" id="">
+
+            <h3>Modes de paiement:</h3>
+            <table>
+                <tr>
+                    <td><input type="radio" name="pay" id=""></td>
+                    <td>Carte Bleue</td>
+                    <td><img src="img\cb.jpg" alt="Carte Bleue" width="67" height="46"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="pay" id=""></td>
+                    <td>Visa</td>
+                    <td><img src="img\visa.jpg" alt="Visa" width="67" height="46"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="pay" id=""></td>
+                    <td>MasterCard</td>
+                    <td><img src="img\mastercard.jpg" alt="MasterCard" width="67" height="46"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="pay" id=""></td>
+                    <td>American Express</td>
+                    <td><img src="img\ae.jpg" alt="American Express" width="67" height="46"></td>
+                </tr>
+            </table>
+
+            <label for="email">Saisissez votre adresse email pour recevoir votre facture:</label>
+            <input type="email" name="email" id="" placeholder="adresse@email.com">
+        </form>        
+
+        <hr>                
+
+        <footer>            
+            <center>
+                <table  background="img\white.png">
+                    <tr>
+                        <td rowspan="2"><iframe width="560" height="315" src="https://www.youtube.com/embed/tCYwqTo2Kx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                        <td colspan="2">
+                            <center><h4>Menu</h4></center>
+                            <ul type="none">
+                                <li>Accueil</li>
+                                <li>Commander en ligne
+                                    <ul type="none">
+                                        <li>Notre carte</li>
+                                    </ul>
+                                </li>
+                                <li>Retrait sur place</li>
+                                <li>Actualité & Infos
+                                    <ul type="none">
+                                        <li>Avis certifiés</li>
+                                    </ul>
+                                </li>
+                                <li>Nous contacter</li>
+                            </ul>
+                        </td>
+                    </tr>        
+                    <tr>
+                        <td>
+                            <center><h4>Horaires</h4></center>                        
+                            Lundi: 9:00-16:45 <br>
+                            Mardi: 9:00-16:45 <br>
+                            Mercredi: 9:00-16:45 <br>
+                            Jeudi: 9:00-16:45 <br>
+                            Vendredi: 9:00-16:45
+                        </td>
+                        <td>
+                            <center><h4>Adresse</h4></center>    
+                            34 Av. de l'Europe <br> Bâtiment D, <br> 38100 Grenoble
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </footer>
+    </body>
+</html>
